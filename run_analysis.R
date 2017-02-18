@@ -26,11 +26,15 @@ raw_data <- rbind(test_data, train_data)
 #get and add data labels
 data_labels <- read.table(unz("raw_data.zip", "UCI HAR Dataset/features.txt"), header=F, quote="\"", sep=" ")
 names(raw_data) <- c("activity_num", "subject_num", gsub(pattern="[()]", replacement="", x = data_labels[,2]))
-raw_data <- raw_data[,!duplicated(names(raw_data))] #remove columns with duplicated names
 
-cols_to_keep <- c(1, 2, grep("mean|std", names(raw_data))) #keep only columns with mean and std in name
+#remove columns with duplicate names and keep only columns with mean and std in name
+raw_data <- raw_data[,!duplicated(names(raw_data))]
+cols_to_keep <- c(1, 2, grep("mean|std", names(raw_data))) 
 raw_data <- raw_data[,cols_to_keep] 
 
-joined <- merge(activity_labels, raw_data, by.x = "activity_num", by.y = "activity_num") #join activity labels to raw_data
-final_output <- joined %>% group_by(activity_name, subject_num) %>% summarize_each(funs(mean)) # output dataset with mean of each activity_name, subject for every variable
+#join activity labels to raw_data
+joined <- merge(activity_labels, raw_data, by.x = "activity_num", by.y = "activity_num") 
+
+#create and save output dataset with mean of each activity_name, subject for every variable
+final_output <- joined %>% group_by(activity_name, subject_num) %>% summarize_each(funs(mean)) 
 write.table(final_output, file="output.txt")
