@@ -17,7 +17,7 @@ The script for performing the process of getting and cleaning data is called run
 
 
 ##Tidy Dataset Output
-The output dataset conforms to all of the criteria for Tidy data as outlined in Hadley Wickham's paper https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwidzrCm2ZrSAhVP3mMKHfO8BPAQFggcMAA&url=http%3A%2F%2Fvita.had.co.nz%2Fpapers%2Ftidy-data.pdf&usg=AFQjCNFUAQr-w_87XpPhfEDoDYQw5-G5zg&sig2=WvpA5iZDs-dDcpSXe3OrCQ:
+The resulting dataset created by the run_analysis.R script is saved as output.txt.  It conforms to all of the criteria for Tidy data as outlined in Hadley Wickham's paper https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwidzrCm2ZrSAhVP3mMKHfO8BPAQFggcMAA&url=http%3A%2F%2Fvita.had.co.nz%2Fpapers%2Ftidy-data.pdf&usg=AFQjCNFUAQr-w_87XpPhfEDoDYQw5-G5zg&sig2=WvpA5iZDs-dDcpSXe3OrCQ:
 
 1. each variable forms a column
 2. each observation forms a row
