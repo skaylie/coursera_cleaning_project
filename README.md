@@ -9,11 +9,12 @@ The script for performing the process of getting and cleaning data is called run
 
 1. retrieves the source data from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip, 
 2. adds columns for the subject and activity performed for each observation.  
-3. adds field labels to the data
-4. selects only those columns that represent the mean or standard deviation (std) of their respective measurements
-5. adds a human-readable label for the activity of each observation. Possible activities are: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING.
-6. produces a tidy dataset containing the mean of each observed variable for each activity-subject pair
-7. saves the dataset as output.txt
+3. combines the test and train datasets from the underlying dataset into a single dataset
+4. adds field labels to the data
+5. selects only those columns that represent the mean or standard deviation (std) of their respective measurements
+6. adds a human-readable label for the activity of each observation. Possible activities are: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING.
+7. produces a tidy dataset containing the mean of each observed variable for each activity-subject pair
+8. saves the dataset as output.txt
 
 
 ##Tidy Dataset Output
