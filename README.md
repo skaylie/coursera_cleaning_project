@@ -10,7 +10,8 @@ WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
 3. adds field labels to the data
 4. selects only those columns that represent the mean or standard deviation (std) of their respective measurements
 5. replaces the index number of respective activity with its human-readable label
-6. produces a tidy dataset containing the mean of each variable for each activity-subject pair
+6. produces a tidy dataset containing the mean of each observed variable for each activity-subject pair
+7. saves the dataset as output.txt
 
 ##Tidy Dataset Output
 The output dataset conforms to all of the criteria for Tidy data as outlined in Hadley Wickham's paper:
