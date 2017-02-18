@@ -37,4 +37,4 @@ joined <- merge(activity_labels, raw_data, by.x = "activity_num", by.y = "activi
 
 #create and save output dataset with mean of each activity_name, subject for every variable
 final_output <- joined %>% group_by(activity_name, subject_num) %>% summarize_each(funs(mean)) 
-write.table(final_output, file="output.txt")
+write.table(final_output, file="output.txt", row.names = FALSE)
